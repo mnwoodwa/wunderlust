@@ -15,6 +15,7 @@
         </picture>
         <p>Let Wunderlust Travel help you plan the trip of your dreams!</p>
         <nav>
+            <a class="skip-link" href="#main">Skip to Main Content</a>
             <ul>
                 <li>
                     <a href="#destinations">Destinations</a>
@@ -33,7 +34,7 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 </header>
-<main>
+<main id="main">
     <section>
     <h2>Majorca</h2>
     <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
@@ -202,43 +203,75 @@
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         <section>
             <h3>Location</h3>
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <circle cx="12" cy="11" r="3" />
-  <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-</svg>
-Location: Mediterranean 
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="11" r="3" />
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+            </svg>
+            <p>Location: Mediterranean</p>
         </section>
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-Population
-<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <circle cx="9" cy="7" r="4" />
-  <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-  <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
-</svg>
-
-Population: 923,608
+        <section>
+            <h3>Population</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="100" height="100" viewBox="0 0 24 24" stroke-width="1" stroke="#a905b6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="9" cy="7" r="4" />
+            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+        </svg>
+        <p>Population: 923,608</p>
+        </section>
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     </section>
-
-Contact Us
-First Name (Enter first name)
-Last Name (Enter last name)
-
-Contact Method (Email, Text, Phone)
-Email Address (Enter Email)
-Phone Number (Enter telephone number)
-
-Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-Travel Time (Fall, Winter, Spring, Summer, Flexible)
-
-</main>
+    <section>
+        <h2>Contact Us</h2>
+        <form>
+            <label id="first">First Name<span class="required">*</label>(Enter first name)
+            <input id="name" type="text" required>
+            <label id="last">Last Name<span class="required">*</label>(Enter last name)
+            <input id="name" type="text" required>
+            <fieldset>
+                <legend>Contact Method<span class="required">*</span></legend>
+                <input id="emails" type="radio" name="contact" value="emails">
+                <label id="emails">Email</label>
+                <input id="texts" type="radio" name="contact" value="texts">
+                <label id="texts">Text</label>
+                <input id="phones" type="radio" name="contact" value="phones">
+                <label id="phones">Phone</label>
+            </fieldset>
+            <label id="emailadd">Email Address<span class="required">*</label>(Enter Email)
+            <input id="email" type="email" required>
+            <label id="phonenum">Phone Number<span class="required">*</label>(Enter telephone number)
+            <input id="phone" type="tel" required>
+            <label id="dest">Destination<span class="required">*</label>
+            <select id="dest" name="dest" required>
+                <option value="">Select</option>
+                <option value="1">Barcelona</option>
+                <option value="2">Granada</option>
+                <option value="3">Ibiza</option>
+                <option value="4">Madrid</option>
+                <option value="5">Majorca</option>
+                <option value="6">Seville</option>
+                <option value="7">Tenerife</option>
+                <option value="8">Valencia</option>
+            </select>
+            <label id="time">Travel Time<span class="required">*</label>
+            <select id="time" name="time" required>
+                <option value="">Select</option>
+                <option value="1">Fall</option>
+                <option value="2">Winter</option>
+                <option value="3">Spring</option>
+                <option value="4">Summer</option>
+                <option value="5">Flexible</option>
+                </select>
+            </form>
+        </section>
+    </main>
 <footer>
-Copyright 2021 Wunderlust
-Privacy Statement
-Terms of Service
+    <small>Copyright 2021 Wunderlust<br></small>
+    <small>Privacy Statement<br></small>
+    <small>Terms of Service</small>
 </footer>
 </body>
 </html>
