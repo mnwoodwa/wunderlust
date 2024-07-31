@@ -83,8 +83,24 @@ header {
 #menu-toggle {
     background-color: var(--yellow);
     text-transform: uppercase;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    float: right;
+    text-align: center;
 }
 
+.sr-only {
+    visibility: hidden;
+}
+
+#logo {
+    position: relative;
+    vertical-align: top;
+    margin-right: -10px;
+    
+
+}
 nav ul li {
     background-color: var(--teal);
     color: var(--black);
