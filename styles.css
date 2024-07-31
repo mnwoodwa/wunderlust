@@ -61,3 +61,57 @@ table {
     --white: #ffffff;
     --black: #000000;
 }
+
+@import url('https://fonts.google.com/share?selection.family=Molle:ital@1%7CMontserrat');
+
+h1, h2, h3 {
+    font-family: 'Molle';
+    font-weight: 400;
+    font-style: italic;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    background-image: linear-gradient(var(--teal), var(--white));
+}
+
+#menu-toggle {
+    background-color: var(--yellow);
+    text-transform: uppercase;
+}
+
+nav ul li {
+    background-color: var(--teal);
+    color: var(--black);
+    font-weight: bold;
+    text-decoration: none;
+    border-color: var(--black);
+}
+h1 {
+    color: var(--dark-gray);
+}
+
+#plan {
+    background-color: var(--yellow);
+}
+
+#testimonials {
+    background-color: var(--white);
+}
+
+#about {
+    background-color: var(--blue);
+}
+
+#contact {
+    background-color: var(--white);
+}
+
+footer {
+    background-color: var(--lt-gray);
+}
