@@ -88,19 +88,17 @@ header {
     right: 0px;
     float: right;
     text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    width: 210px;
+    height: 50px;
+    margin-top: 24px;
 }
 
 .sr-only {
     visibility: hidden;
 }
 
-#logo {
-    position: relative;
-    vertical-align: top;
-    margin-right: -10px;
-    
-
-}
 nav ul li {
     background-color: var(--teal);
     color: var(--black);
@@ -110,6 +108,27 @@ nav ul li {
 }
 h1 {
     color: var(--dark-gray);
+    font-size: 50px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+main h2 {
+    font-size: 40px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+p {
+    font-size: 16px;
+    margin-left:32px;
+    margin-right: 32px;
+    line-height: 30px;
+}
+
+header p {
+    font-size: 20px;
+    line-height: 30px;
 }
 
 #plan {
@@ -130,4 +149,40 @@ h1 {
 
 footer {
     background-color: var(--lt-gray);
+}
+
+img {
+    width: 100%;
+    margin-top: 16px;
+}
+
+/*picture {
+}*/
+
+header img {
+    width: 160.3px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+#plan div section {
+    background-color: var(--teal);
+   /* border: 3px var(--white);*/
+    width: 358px;
+    height: 302px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    /*border-radius: 3;*/
 }
