@@ -70,7 +70,7 @@ h1, h2, h3 {
     font-style: italic;
 }
 
-h4, p, q, small, nav, button, form {
+h4, p, q, small, nav, button, span, form {
     font-family: 'Montserrat';
     font-weight: 400;
     font-style: normal;
@@ -137,6 +137,7 @@ header p {
 
 #testimonials {
     background-color: var(--white);
+    text-align: center;
 }
 
 #about {
@@ -149,6 +150,7 @@ header p {
 
 footer {
     background-color: var(--lt-gray);
+    text-align: center;
 }
 
 img {
@@ -165,6 +167,8 @@ header img {
 
 h3 {
     font-size: 40px;
+    margin-left: 44px;
+    margin-top: 18px;
 }
 
 h4 {
@@ -174,15 +178,119 @@ h4 {
 
 #plan div section {
     background-color: var(--teal);
-   /* border: 3px var(--white);*/
+   /*border: 3px var(--white);*/
     width: 358px;
     height: 302px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
     text-transform: uppercase;
     /*border-radius: 3;*/
 }
+
+section a img {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    margin-bottom: auto;
+}
+
+#testimonials div section img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+#testimonials div section h4, #testimonials div section p, #testimonials div section q {
+   margin-left: 72px;
+   margin-right: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#about div section {
+    display: grid;
+    /*Need to still make a side by side grid?*/
+}
+
+#about div section img {
+    width: 100px;
+    height: 100px;
+}
+
+#contact span {
+    font-size: 20px;
+    font-style: italic;
+}
+
+form {
+    display:inline;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    text-align: center;
+    /*trying to line it straight down*/
+}
+
+.required {
+    color: var(--purple);
+    font-size: 30px;
+}
+#names {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#nums {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#selects {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform:uppercase;
+}
+
+.radio-label {
+    font-size: 20px;
+    font-style: normal;
+    text-transform: none;
+}
+
+.radio-input input {
+    width: 75px;
+    height: 75px;
+    accent-color: var(--purple);
+   /* margin-right: 310px;*/
+}
+
+form input {
+    border-color: var(--purple);
+    width: 354px;
+    height: 65px;
+}
+
+.custom-select #destination, .custom-select #travelTime {
+    border-color: var(--purple);
+    width: 354px;
+    height: 75px;
+    /*should arrow be purple?*/
+}
+
+input[type=submit] {
+    background-color: var(--purple);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
