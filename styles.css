@@ -48,7 +48,19 @@ table {
 	border-spacing: 0;
 }
 
-
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
 /*mobile*/
 
 :root {
@@ -297,4 +309,61 @@ input[type=submit] {
 footer a {
     font-size: 16px;
     font-family: 'Montserrat';
+}
+
+@media screen and (min-width: 768px){
+    /*Tablet*/
+    h1 {
+        text-align: center;
+        
+    }
+    header img {
+        width: 236px;
+        height: 103px;
+    }
+    header p {
+        margin-left: 230px;
+    }
+    #menu-toggle {
+        visibility: hidden;
+        text-transform: uppercase;
+        position: static;
+        top: auto;
+        right: auto;
+        float: right;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        width: 210px;
+        height: 50px;
+        margin-top: 0px;
+        text-decoration: none;
+    } 
+    nav ul li {
+        background-color: var(--white);
+        font-weight: bold;
+        visibility: visible;
+        width: 140px;
+        height: 50px;
+        display: inline;
+        float: left;
+        align-items: center;
+        }
+    nav ul li a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        color: var(--black);
+        align-items: center;
+
+
+    }
+    nav ul li:hover {
+        background-color: var(--yellow);
+    }
+    img {
+        width: 293px;
+        margin-top: 16px;
+        align-content: center;
+    }
 }
