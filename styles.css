@@ -90,6 +90,45 @@ h4, p, q, small, nav, button, span, form {
 
 header {
     background-image: linear-gradient(var(--teal), var(--white));
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 250px;
+}
+nav {
+    position: relative;
+    display: inline-block;
+    margin-top:-250px;
+}
+
+nav ul { /*blue box*/
+    display: none;
+    position: absolute;
+    background-color: var(--teal);
+    margin-right: 100px;
+    margin-top: 15px;
+    width: 100%
+    
+}
+nav a {
+    color: var(--black);
+    visibility: visible;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav #toggle {
+    visibility: visible;
+    height: auto;
+    border: 2px solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+
+}
+#toggle {
+    background-color: var(--yellow);
+    text-align: center;
+    visibility: hidden; /*how do I get rid of checkbox*/
 }
 
 #menu-toggle {
@@ -107,17 +146,34 @@ header {
     margin-top: 24px;
 } /*need to figure out dropdown menu*/
 
+nav a:hover, #menu-toggle:hover { /*hover over menu and dropdown*/
+    width: 100%;
+    color: var(--white);
+    background-color: var(--black);
+}
 .sr-only {
     visibility: hidden;
 }
 
-nav ul li {
-    background-color: var(--teal);
+nav ul li { /*nav wording*/
     color: var(--black);
     font-weight: bold;
     text-decoration: none;
-    border-color: var(--black);
+    border-bottom: 1px solid var(--black);
+    width: 100%px;
+    height:50px;
 }
+
+nav:hover ul {
+    display: block;
+    /*text-align: center;*/
+   
+}
+nav li:hover { /*blue box being hovered*/
+    background-color: var(--black);
+    color: var(--white);
+}
+
 h1 {
     color: var(--dark-gray);
     font-size: 50px;
@@ -190,7 +246,8 @@ h4 {
 
 #plan div section {
     background-color: var(--teal);
-   /*border: 3px var(--white);*/ /*why is there no border*/
+    border: 3px solid var(--white);
+    border-radius: 10px;
     width: 358px;
     height: 302px;
     display: block;
@@ -203,6 +260,10 @@ h4 {
     /*border-radius: 3;*/
 }
 
+#plan h3 {
+    margin-top: 32px;
+}
+
 section a img {
     width: 180px;
     height: 180px;
@@ -210,6 +271,11 @@ section a img {
     margin-right: auto;
     margin-top: 32px;
     margin-bottom: auto;
+}
+#testimonials h3 {
+    position: relative;
+    display: flex;
+    margin-right: 210px ;
 }
 
 #testimonials div section img{
@@ -227,9 +293,18 @@ section a img {
    align-items: center;
 }
 
-#about div section {
+#about div {
     display: grid;
+    padding: 2%;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 88px;
+    margin-right: 80px;
     /*Need to still make a side by side grid?*/
+}
+
+#about div section {
+    align-items: center;
+    justify-content: center;
 }
 
 #about div section img {
@@ -243,11 +318,11 @@ section a img {
 }
 
 form {
-    display:inline;
-    /*margin-left: auto;
-    margin-right: auto;*/
+    display:block;
+    padding: 1em;
+    margin: auto;
     text-align: center;
-    /*trying to line it straight down*/
+    line-height: 30px;
 }
 
 .required {
@@ -279,6 +354,8 @@ form {
 }
 
 .radio-input input {
+    display: flex;
+    margin-right: 150px;
     width: 75px;
     height: 75px;
     accent-color: var(--purple);
@@ -286,15 +363,31 @@ form {
 }
 
 form input {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
     border-color: var(--purple);
     width: 354px;
-    height: 65px;
+    height: 65px; 
+    font-size: 16px;
+    font-family: 'Montserrat';
 }
 
+form label {
+    float: left;
+    margin-left: 30px;
+}
+legend {
+    float: left;
+    margin-left: 30px;
+}
 .custom-select #destination, .custom-select #travelTime {
     border-color: var(--purple);
     width: 354px;
     height: 75px;
+    font-size: 16px;
+    font-family: 'Montserrat';
     /*should arrow be purple?*/
 }
 
@@ -304,17 +397,356 @@ input[type=submit] {
     font-weight: 600;
     color: var(--white);
     text-transform: uppercase;
+    margin-top: 10px;
 }
 
 footer a {
+    display: block;
     font-size: 16px;
     font-family: 'Montserrat';
+    line-height: 25px;
+    text-decoration: none;
+    color: var(--black);
+
 }
 
 @media screen and (min-width: 768px){
     /*Tablet*/
-    h1 {
+    h1, h2, h3 {
+        font-family: 'Molle';
+        font-weight: 400;
+        font-style: italic;
+    }
+    
+    h4, p, q, small, nav, button, span, form {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    header {
+        background-image: linear-gradient(var(--teal), var(--white));
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 250px;
+    }
+    nav {
+        position: relative;
+        display: inline-block;
+        margin-top:-250px;
+    }
+    
+    nav ul { /*blue box*/
+        display: none;
+        position: absolute;
+        background-color: var(--teal);
+        margin-right: 100px;
+        margin-top: 15px;
+        width: 100%
+        
+    }
+    nav a {
+        color: var(--black);
+        visibility: visible;
+        display: block;
+        text-decoration: none;
         text-align: center;
+    }
+    
+    nav #toggle {
+        visibility: visible;
+        height: auto;
+        border: 2px solid var(--black);
+        color: var(--black);
+        cursor: pointer;
+    
+    }
+    #toggle {
+        background-color: var(--yellow);
+        text-align: center;
+        visibility: hidden; /*how do I get rid of checkbox*/
+    }
+    
+    #menu-toggle {
+        background-color: var(--yellow);
+        text-transform: uppercase;
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        float: right;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        width: 210px;
+        height: 50px;
+        margin-top: 24px;
+    } /*need to figure out dropdown menu*/
+    
+    nav a:hover, #menu-toggle:hover { /*hover over menu and dropdown*/
+        width: 100%;
+        color: var(--white);
+        background-color: var(--black);
+    }
+    .sr-only {
+        visibility: hidden;
+    }
+    
+    nav ul li { /*nav wording*/
+        color: var(--black);
+        font-weight: bold;
+        text-decoration: none;
+        border-bottom: 1px solid var(--black);
+        width: 100%px;
+        height:50px;
+    }
+    
+    nav:hover ul {
+        display: block;
+        /*text-align: center;*/
+       
+    }
+    nav li:hover { /*blue box being hovered*/
+        background-color: var(--black);
+        color: var(--white);
+    }
+    
+    h1 {
+        color: var(--dark-gray);
+        font-size: 50px;
+        text-align: center;
+        position: relative;
+        /*margin-left: 32px;
+        margin-right: 32px;*/
+    }
+    
+    main h2 {
+        font-size: 40px;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+    
+    p {
+        font-size: 16px;
+        margin-left:32px;
+        margin-right: 32px;
+        line-height: 30px;
+    }
+    
+    header p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    #plan {
+        background-color: var(--yellow);
+    }
+    
+    #testimonials {
+        background-color: var(--white);
+        text-align: center;
+    }
+    
+    #about {
+        background-color: var(--blue);
+    }
+    
+    #contact {
+        background-color: var(--white);
+    }
+    
+    footer {
+        background-color: var(--lt-gray);
+        text-align: center;
+    }
+    
+    img {
+        width: 100%;
+        margin-top: 16px;
+    }
+    
+    /*picture {
+    }*/   /*third picture needs to be same size and go off the screen*/
+    
+    header img {
+        width: 160.3px;
+    }
+    
+    h3 {
+        font-size: 40px;
+        margin-left: 44px;
+        margin-top: 18px;
+    }
+    
+    h4 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+    
+    #plan div section {
+        background-color: var(--teal);
+        border: 3px solid var(--white);
+        border-radius: 10px;
+        width: 358px;
+        height: 302px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        /*border-radius: 3;*/
+    }
+    
+    #plan h3 {
+        margin-top: 32px;
+    }
+    
+    section a img {
+        width: 180px;
+        height: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 32px;
+        margin-bottom: auto;
+    }
+    #testimonials h3 {
+        position: relative;
+        display: flex;
+        margin-right: 210px ;
+    }
+    
+    #testimonials div section img{
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: auto;
+    }
+    
+    #testimonials div section h4, #testimonials div section p, #testimonials div section q {
+       margin-left: 72px;
+       margin-right: 60px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    
+    #about div {
+        display: grid;
+        padding: 2%;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 88px;
+        margin-right: 80px;
+        /*Need to still make a side by side grid?*/
+    }
+    
+    #about div section {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #about div section img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    #contact span {
+        font-size: 20px;
+        font-style: italic;
+    }
+    
+    form {
+        display:block;
+        padding: 1em;
+        margin: auto;
+        text-align: center;
+        line-height: 30px;
+    }
+    
+    .required {
+        color: var(--purple);
+        font-size: 30px;
+    }
+    #names {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    #nums {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    #selects {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform:uppercase;
+    }
+    
+    .radio-label {
+        font-size: 20px;
+        font-style: normal;
+        text-transform: none;
+    }
+    
+    .radio-input input {
+        display: flex;
+        margin-right: 150px;
+        width: 75px;
+        height: 75px;
+        accent-color: var(--purple);
+       /* margin-right: 310px;*/
+    }
+    
+    form input {
+        display: block;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        border-color: var(--purple);
+        width: 354px;
+        height: 65px; 
+        font-size: 16px;
+        font-family: 'Montserrat';
+    }
+    
+    form label {
+        float: left;
+        margin-left: 30px;
+    }
+    legend {
+        float: left;
+        margin-left: 30px;
+    }
+    .custom-select #destination, .custom-select #travelTime {
+        border-color: var(--purple);
+        width: 354px;
+        height: 75px;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        /*should arrow be purple?*/
+    }
+    
+    input[type=submit] {
+        background-color: var(--purple);
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--white);
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+    
+    footer a {
+        display: block;
+        font-size: 16px;
+        font-family: 'Montserrat';
+        line-height: 25px;
+        text-decoration: none;
+        color: var(--black);
+    
+    }
         
     }
     header img {
